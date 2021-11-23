@@ -18,13 +18,13 @@
         <h1>ICowork Chile</h1>
     </header>
 
-        <nav class="container">
-            <a href="inicio.jsp">Inicio </a> 
-            <a href="about.jsp">Sobre nosotros </a>
-            <a href="galeria.jsp">Galería </a>
-            <a href="contacto.jsp">Contacto</a>
-            <a href="login.jsp">Login</a>
-        </nav>
+  <nav>
+ 		<a href="Inicio">Inicio </a> 
+        <a href="About">Sobre nosotros </a>
+        <a href="Galeria">Galería </a>
+        <a href="Contacto">Contacto</a>
+         <a href="Login">Login</a>
+    </nav>
 
     <main>
         <h2>Oficinas compartidas </br>Smart Places</h2>
