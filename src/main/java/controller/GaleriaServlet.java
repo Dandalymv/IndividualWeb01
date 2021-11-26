@@ -1,4 +1,4 @@
-package servletIndividual;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Contacto
+ * Servlet implementation class Galeria
  */
-@WebServlet("/Contacto")
-public class Contacto extends HttpServlet {
+@WebServlet("/Galeria")
+public class GaleriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Contacto() {
+    public GaleriaServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class Contacto extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/contacto.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/galeria.jsp").forward(request, response);
 	}
 
 	/**

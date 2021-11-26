@@ -1,23 +1,29 @@
-package servletIndividual;
+package controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Oficina;
+import model.DAO.OficinaDAOImpl;
+
+
 /**
- * Servlet implementation class Inicio
+ * Servlet implementation class ListadoOficinas
  */
-@WebServlet("/Inicio")
-public class Inicio extends HttpServlet {
+@WebServlet("/ListadoOficinas")
+public class ListadoOficinasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Inicio() {
+    public ListadoOficinasServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +32,10 @@ public class Inicio extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/inicio.jsp").forward(request, response);
+		OficinaDAOImpl oDAO = new OficinaDAOImpl();
+		List<Oficina> offices = oDAO.readAll();
+		request.setAttribute("offices", offices);
+		getServletContext().getRequestDispatcher("/views/listadoOficinas.jsp").forward(request, response);
 	}
 
 	/**

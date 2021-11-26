@@ -1,4 +1,4 @@
-package servletIndividual;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class About
  */
 @WebServlet("/About")
-public class About extends HttpServlet {
+public class AboutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public About() {
+    public AboutServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

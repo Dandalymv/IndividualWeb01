@@ -7,7 +7,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
-<link rel="stylesheet" href="css/estilos.css">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -21,18 +25,35 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="/IndividualWeb01/views/css/estilos.css">
 </head>
 <body>
 	<header>
 		<h1>ICowork Chile</h1>
 	</header>
- 	<nav>
- 		<a href="Inicio">Inicio </a> 
-        <a href="About">Sobre nosotros </a>
-        <a href="Galeria">Galería </a>
-        <a href="Contacto">Contacto</a>
-         <a href="Login">Login</a>
-    </nav>
+<section>
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #C11680;">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="Inicio">Smart Places</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarText"
+					aria-controls="navbarText" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="Inicio">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="Login">Ingresar</a></li>
+					
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</section>
 	<main>
 		<h2>Bienvenido</h2>
 		<div class="container">

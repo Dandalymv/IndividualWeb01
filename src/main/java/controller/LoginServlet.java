@@ -1,4 +1,4 @@
-package servletIndividual;
+package controller;
 
 
 import java.io.IOException;
@@ -10,19 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Usuario;
+
 
 
 /**
  * Servlet implementation class Login
  */
 @WebServlet("/Login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,12 +43,18 @@ public class Login extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("password");
 		
+		HttpSession sesion = request.getSession(true);
+		Usuario u = new Usuario();
+		u.setNombre("Usuario");
+		u.setTipo("Cliente");
+		u.setRun(123456789);
+		sesion.setAttribute("usuario", u);
 		
 		
 		
 		if(usuario.equals("admin") && password.equals("1234")){
 			//response.sendRedirect("Home");
-			getServletContext().getRequestDispatcher("/views/inicio.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/views/contacto.jsp").forward(request, response);
 			
 		} else {
 			getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
