@@ -14,8 +14,7 @@
 	crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -25,7 +24,7 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="/IndividualWeb01/views/css/estilos.css">
+<link rel="stylesheet" href="/IndividualWeb01/css/estilos.css">
 </head>
 <body>
 	<header>
@@ -81,7 +80,7 @@
 										class="fas fa-id-badge"></i></span>
 								</div>
 								<input type="text" class="form-control"
-									placeholder="Nombre Oficina" name="nombreOficina">
+									placeholder="Nombre Oficina" name="nombreOficina" required>
 
 							</div>
 							<div class="input-group form-group">
@@ -90,7 +89,7 @@
 										class="fas fa-map-marked-alt"></i></span>
 								</div>
 								<input type="text" class="form-control" placeholder="Dirección"
-									name="direccion">
+									name="direccion" required>
 
 							</div>
 							<div class="input-group form-group">
@@ -99,7 +98,7 @@
 										class="fas fa-map-marked-alt"></i></span>
 								</div>
 								<input type="text" class="form-control" placeholder="Comuna"
-									name="comuna">
+									name="comuna" required>
 
 							</div>
 							<div class="input-group form-group">
@@ -107,8 +106,25 @@
 									<span class="input-group-text"><i
 										class="fas fa-map-marked-alt"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Región"
-									name="region">
+								<select class="form-control" placeholder="Región"
+									name="region" required>
+									<option>Región Metropolitana de Santiago</option>
+									<option>Región de Arica y Parinacota</option>
+									<option>Región de Tarapacá</option>
+									<option>Región de Antofagasta</option>
+									<option>Región de Atacama</option>
+									<option>Región de Coquimbo</option>
+									<option>Región de Valparaíso</option>
+									<option>Región del Libertador General Bernardo O’Higgins</option>
+									<option>Región del Maule</option>
+									<option>Región del Ñuble</option>
+									<option>Región del Biobío</option>
+									<option>Región de La Araucanía</option>
+									<option>Región de Los Ríos</option>
+									<option>Región de Los Lagos</option>
+									<option>Región de Aysén del General Carlos Ibáñez del Campo</option>
+									<option>Región de Magallanes y la Antártica Chilena</option>
+								</select>
 
 							</div>
 							<div class="input-group form-group">
@@ -116,7 +132,7 @@
 									<span class="input-group-text"><i class="fas fa-phone"></i></span>
 								</div>
 								<input type="text" class="form-control" placeholder="Teléfono"
-									name="telefono">
+									name="telefono" required>
 
 							</div>
 							<div class="input-group form-group">
@@ -125,7 +141,7 @@
 										class="fas fa-envelope"></i></span>
 								</div>
 								<input type="text" class="form-control"
-									placeholder="Correo electrónico" name="correo">
+									placeholder="Correo electrónico" name="correo" required>
 
 							</div>
 							<div class="input-group form-group">
@@ -134,24 +150,26 @@
 										class="fas fa-user-plus"></i></span>
 								</div>
 								<input type="text" class="form-control"
-									placeholder="Espacios disponibles" name="espacios">
+									placeholder="Espacios disponibles" name="espacios" required>
 
 							</div>
 							<div class="input-group form-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-phone"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Horario"
-									name="horario">
-
+								<select class="form-control" placeholder="Región"
+									name="horario" required>
+									<option>Diurno</option>
+									<option>Vespertino</option>
+								</select>
 							</div>
 							<div class="input-group form-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i
 										class="fas fa-dollar-sign"></i></span>
 								</div>
-								<input type="text" class="form-control"
-									placeholder="Valor diario" name="valorDiario">
+								<input type="number" class="form-control"
+									placeholder="Valor diario" name="valorDiario" required>
 
 							</div>
 
@@ -179,5 +197,9 @@
 			</ul>
 		</div>
 	</footer>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
 </body>
 </html>

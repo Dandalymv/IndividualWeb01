@@ -1,5 +1,5 @@
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 :root {
   --facebook: #3b5999;
@@ -40,6 +40,31 @@ a:active {
 nav a {
 	color: #3c6afc;
 }
+
+.navbar {
+	padding: 0px 16px;
+	
+}
+.navbar-brand {
+	color: #F8AE31 !important;
+}
+
+.navbar-brand:hover {
+	transform: translateY(0px) scale(1.1);
+	
+}
+
+.nav-link {
+ color: #F8AE31 !important;
+ }
+ 
+.nav-link:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+
+
+
 h1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -105,6 +130,15 @@ div.container > img {
   box-shadow: 5px 5px 3px #c0167f;
 }
 
+div.galeria:hover img{
+	filter: blur(2px);
+}
+
+div.galeria > .container > img:hover  {
+ 	transform: translateY(-3px) scale(1.05);
+ 	filter:none;
+}
+
 div.principal {
   display: flex;
   flex-flow: row wrap;
@@ -115,6 +149,8 @@ div.principal > img {
   width: 90%;
   box-shadow: 5px 5px 9px #c0167f;
 }
+
+
 
 p {
   text-align: justify;
@@ -147,10 +183,19 @@ ul {
   padding: 0;
 }
 
-.rrss ul li {
+/*.rrss ul li {
   display: inline-block;
   margin: 10px;
   width: 40px;
+  text-align: center;
+}*/
+
+
+
+.rrss ul li {
+  display: inline-block;
+  margin: 5px;
+  width: 50px;
   text-align: center;
 }
 
@@ -200,7 +245,7 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
-color: #FFC312;
+color: #F8AE31;
 }
 
 .social_icon span:hover{
@@ -220,7 +265,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
+background-color: #F8AE31;
 color: black;
 border:0 !important;
 }
@@ -245,8 +290,8 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #FFC312;
-width: 100px;
+background-color: #F8AE31;
+width: auto;
 }
 
 .login_btn:hover{

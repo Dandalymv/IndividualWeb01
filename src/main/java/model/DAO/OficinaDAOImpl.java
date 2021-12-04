@@ -47,7 +47,7 @@ public class OficinaDAOImpl implements IOficinaDAO{
 
 	@Override
 	public List<Oficina> readAll() {
-		String sql = "select nombre_oficina, direccion, comuna, region, telefono, correo, espacios, horario, valor from oficinas";
+		String sql = "select nombre_oficina, idoficinas, direccion, comuna, region, telefono, correo, espacios, horario, valor from oficinas";
 		ArrayList<Oficina> offices = new ArrayList<Oficina>();
 		
 		try {
@@ -65,7 +65,8 @@ public class OficinaDAOImpl implements IOficinaDAO{
 						rs.getString("correo"), 
 						rs.getString("espacios"),
 						rs.getString("horario"),
-						rs.getString("valor")));
+						rs.getString("valor"),
+						rs.getInt("idoficinas")));
 			}
 			stm.execute(sql);
 			stm.close();
@@ -75,22 +76,83 @@ public class OficinaDAOImpl implements IOficinaDAO{
 		}
 		return offices;
 	}
-
+	//nombre_oficina, direccion, comuna, region, telefono, correo, espacios, horario, valor
 	@Override
 	public Oficina readOne(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select nombre_oficina, direccion, comuna, region, telefono, correo, "
+				+ "espacios, horario, valor, idoficinas from oficinas where idoficinas = " + id;
+		Oficina o = null;
+		
+		try {
+			cn = Conexion.getConn();
+			Statement stm = cn.createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			
+			if(rs.next()) {
+				o = new Oficina(
+						rs.getString("nombre_oficina"), 
+						rs.getString("direccion"), 
+						rs.getString("comuna"), 
+						rs.getString("region"), 
+						rs.getString("telefono"), 
+						rs.getString("correo"), 
+						rs.getString("espacios"), 
+						rs.getString("horario"), 
+						rs.getString("valor"), 
+						rs.getInt("idoficinas"));
+				
+			}
+			
+			rs.close();
+			stm.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+		return o;
 	}
 
 	@Override
 	public void update(Oficina c) {
-		// TODO Auto-generated method stub
+		String sql = "update oficinas set "
+				+ "nombre_oficina = '" + c.getNombreOficina() + "', "
+				+ "direccion = '" + c.getDireccion() + "', " 
+				+ "comuna = '" + c.getComuna() + "', "
+				+ "region = '" + c.getRegion() + "', "
+				+ "telefono = '" + c.getTelefono() + "', " 
+				+ "correo = '" + c.getCorreo() + "', "
+				+ "espacios = '" + c.getEspacios() + "', "
+				+ "horario = '" + c.getHorario() + "', "
+				+ "comuna = '" + c.getComuna() + "', "
+				+ "valor = '" + c.getValorDiario() + 
+				"'WHERE idusuarios ='" + c.getId() + "'";
+		
+		try { 
+			
+			cn= Conexion.getConn();
+			Statement stm = cn.createStatement();
+			stm.execute(sql);
+			stm.close();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		String sql = "DELETE FROM oficinas WHERE idoficinas = '" + id + "'";	
+		
+		try {
+			cn = Conexion.getConn();
+			Statement stm = cn.createStatement();
+			
+			stm.execute(sql);
+			stm.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 		
 	}
 

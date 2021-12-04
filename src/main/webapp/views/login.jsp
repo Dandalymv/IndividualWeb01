@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +15,7 @@
 	crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -25,14 +25,17 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
-	<link rel="stylesheet" href="/IndividualWeb01/views/css/estilos.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/estilos.css" />
 </head>
+
 <body>
 	<header>
 		<h1>ICowork Chile</h1>
 	</header>
-<section>
-		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #C11680;">
+	<section>
+		<nav class="navbar navbar-expand-lg navbar-light"
+			style="background-color: #C11680;">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="Inicio">Smart Places</a>
 				<button class="navbar-toggler" type="button"
@@ -47,7 +50,7 @@
 							aria-current="page" href="Inicio">Inicio</a></li>
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="Login">Ingresar</a></li>
-					
+
 					</ul>
 
 				</div>
@@ -70,7 +73,7 @@
 									<span class="input-group-text"><i class="fas fa-user"></i></span>
 								</div>
 								<input type="text" class="form-control"
-									placeholder="Nombre de usuario" name=usuario>
+									placeholder="Nombre de usuario" name=usuario required>
 
 							</div>
 							<div class="input-group form-group">
@@ -78,7 +81,7 @@
 									<span class="input-group-text"><i class="fas fa-key"></i></span>
 								</div>
 								<input type="password" name="password" class="form-control"
-									placeholder="Contraseña">
+									placeholder="Contraseña" required>
 							</div>
 							<div class="row align-items-center remember">
 								<input type="checkbox">Recordar
@@ -114,5 +117,9 @@
 			</ul>
 		</div>
 	</footer>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
 </body>
 </html>
