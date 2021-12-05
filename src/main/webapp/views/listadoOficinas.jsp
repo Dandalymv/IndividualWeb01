@@ -72,7 +72,7 @@
 			<table class="table table-striped table-hover table-dark">
 				<thead>
 					<tr class="thead-light">
-						<th>#</th>
+						<th>ID</th>
 						<th>Nombre Oficina</th>
 						<th>Dirección</th>
 						<th>Comuna</th>

@@ -106,7 +106,7 @@
 										class="fas fa-envelope"></i></span>
 								</div>
 								<input type="text" class="form-control"
-									placeholder="correo" name=correo required>
+									placeholder="Correo" name=correo required>
 
 							</div>
 							<div class="form-group">
